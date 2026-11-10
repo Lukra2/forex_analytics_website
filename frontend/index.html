@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autolytic - Análise de mercado</title>
+<link rel="stylesheet" href="/static/main.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="brand" aria-label="Autolytic, início"><span class="brand-mark">A<span>✦</span></span><span>auto<span class="brand-accent">lytic</span><small>MARKET INTELLIGENCE</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#visao-geral" class="active">Visão geral</a><a href="#analise-tecnica">Análise técnica</a><a href="#calendario">Calendário</a><a href="#noticias">Notícias</a></nav>
+    <div class="header-status"><span class="status-dot"></span><span id="connection-status">Conectando</span><span></div>
+  </div>
+</header>
+<main>
+  <div class="page-intro" id="visao-geral"><div><div class="eyebrow">ANALISE O XAUUSD DO MELHOR JEITO POSSÍVEL</div><h1>Uma visão mais clara<br><em>para o seu próximo passo.</em></h1><p>Acompanhe o XAUUSD, entenda os sinais e prepare-se para pegar aquela tendência que gostamos.</p></div><div class="intro-tag"><span>✦</span> ANÁLISE INTELIGENTE <small>XAU / USD</small></div></div>
+  <div class="section-label"><span>01 / VISÃO GERAL</span><span>OURO · DÓLAR AMERICANO</span></div>
+  <section class="top" aria-label="Resumo do mercado">
+    <div class="metric metric-price"><div class="metric-label">COTAÇÃO ATUAL <span>◈</span></div><div class="instrument"><strong id="sym">XAUUSD</strong><span>Ouro / Dólar americano</span></div><div class="price" id="price">--</div><div class="metric-foot">Preço de referência · USD</div></div>
+    <div class="metric"><div class="metric-label">ANÁLISE TÉCNICA <span>↗</span></div><div class="metric-title">Sinal dos indicadores</div><div class="verdict" id="verdict">--</div><div class="metric-foot">Período selecionado: <strong id="tfn">H1</strong></div></div>
+    <div class="metric"><div class="metric-label">SENTIMENTO DE MERCADO <span>✦</span></div><div class="metric-title">Viés das notícias</div><div class="verdict" id="bias">--</div><div class="metric-foot">Leitura gerada por IA</div></div>
+    <div class="metric next-metric"><div class="metric-label">NO RADAR <span>◷</span></div><div class="metric-title">Próximo evento USD</div><div class="next-title" id="next-event">Aguardando calendário</div><div class="metric-foot" id="next-event-time">Impacto médio ou alto</div></div>
+  </section>
+
+  <section class="ai">
+    <div class="card-heading"><div><div class="eyebrow">✦ &nbsp; INTELIGÊNCIA DE MERCADO</div><h2>O que observar agora</h2><p>Uma leitura das notícias e dos eventos relevantes para o ouro.</p></div><span class="pill">ANÁLISE COM IA</span></div>
+    <div id="ai-status" class="status" role="status" aria-live="polite"><span class="spinner" aria-hidden="true"></span> Carregando análise...</div>
+    <div id="ai" class="mut">Aguardando análise. Defina OPENAI_API_KEY para ativar.</div>
+  </section>
+
+  <section id="analise-tecnica" class="technical-card">
+    <div class="card-heading"><div><div class="eyebrow">02 / SINAIS DO MERCADO</div><h2>Análise técnica</h2><p>Selecione um período para explorar os indicadores.</p></div><span class="card-icon">↗</span></div>
+    <div class="tabs" id="tabs"></div>
+    <div class="table-heading"><span>INDICADOR</span><span>VALOR</span><span>SINAL</span></div>
+    <table id="ind"></table>
+    <div class="subheading"><h3>Price action</h3><span id="pa-tf">H1</span></div>
+    <div id="price-action" class="mut">Aguardando dados.</div>
+    <p class="mut footnote">Padrões nos últimos 40 candles fechados. O preço indicado é a mínima ou máxima do candle; o sinal não confirma uma reversão futura.</p>
+  </section>
+
+  <section id="calendario" class="calendar-card">
+    <div class="card-heading"><div><div class="eyebrow">03 / ACOMPANHE DE PERTO</div><h2>Calendário econômico</h2><p>Eventos USD no seu horário local. Abra cada evento para explorar os cenários.</p></div><span class="card-icon">◷</span></div>
+    <div id="events" class="event-list"></div>
+  </section>
+
+  <section class="news" id="noticias">
+    <div class="card-heading"><div><div class="eyebrow">04 / CONTEXTO DE MERCADO</div><h2>Últimas notícias</h2><p>As manchetes por trás dos movimentos.</p></div><span class="pill">FONTES GLOBAIS ↗</span></div>
+    <ul id="news"></ul>
+  </section>
+  <footer><span><strong>autolytic</strong> &nbsp; · &nbsp; Uma visão mais clara do mercado.</span><span>Análises e cenários são informativos e não garantem movimentos futuros. EM DESENVOLVIMENTO</span></footer>
+</main>
+<script src="/static/main.js" defer></script>
+</body>
+</html>
